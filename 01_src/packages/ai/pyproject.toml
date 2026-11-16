@@ -8,7 +8,12 @@ version = "0.1.0"
 description = "Esqueleto base para grafos LangGraph reutilizables en API o workers."
 requires-python = ">=3.12"
 dependencies = [
-    "langgraph>=0.2.32,<0.3.0",
+    # deepagents 0.7 exige langchain>=1.5, que a su vez exige langgraph>=1.2.12
+    "langgraph>=1.2.12,<2.0.0",
+    "deepagents>=0.7.38,<0.8.0",
+    # Modelo de respaldo (Groq); Gemini ya viene con deepagents (langchain-google-genai)
+    "langchain-groq>=1.2.0,<2.0.0",
+    "tavily-python>=0.8.5,<0.9.0",
     "pydantic>=2.7.0,<3.0.0",
 ]
 
