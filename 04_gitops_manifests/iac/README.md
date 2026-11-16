@@ -1,0 +1,3 @@
+# iac
+Infraestructura como código (bicep-terraform): App Service, Functions, Service Bus, PostgreSQL, Blob, Key Vault, ...
+

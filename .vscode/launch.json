@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API FastAPI (debug estable)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "main:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8010"
+      ],
+      "cwd": "${workspaceFolder}/01_src/api",
+      "envFile": "${workspaceFolder}/.env",
+      "justMyCode": false,
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "API FastAPI (debug con reload)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "main:app",
+        "--reload",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8010"
+      ],
+      "cwd": "${workspaceFolder}/01_src/api",
+      "envFile": "${workspaceFolder}/.env",
+      "justMyCode": false,
+      "console": "integratedTerminal",
+      "subProcess": true
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.ruff": "explicit",
+        "source.organizeImports.ruff": "explicit"
+    },
+    "ruff.configuration": "${workspaceFolder}/ruff.toml",
+    "python.defaultInterpreterPath": "d:/Git/gestion-contenidos/.venv/Scripts/python.exe",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/01_src/api",
+        "${workspaceFolder}/01_src/worker",
+        "${workspaceFolder}/01_src/worker/src",
+        "${workspaceFolder}/01_src/worker_search_sheet",
+        "${workspaceFolder}/01_src/worker_search_sheet/src",
+        "${workspaceFolder}/01_src/worker_inbound_processor",
+        "${workspaceFolder}/01_src/worker_inbound_processor/src",
+        "${workspaceFolder}/01_src/packages/data/src",
+        "${workspaceFolder}/01_src/packages/common/src",
+        "${workspaceFolder}/01_src/packages/contracts/src",
+        "${workspaceFolder}/01_src/packages/ai/src"
+    ]
+}

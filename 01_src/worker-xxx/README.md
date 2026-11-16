@@ -1,0 +1,3 @@
+# worker-xxx
+Worker (OCR, IA, ...) para...
+

@@ -1,0 +1,35 @@
+[project]
+name = "baseue-template"
+version = "1.0.0"
+description = "BaseUE monorepo starter: FastAPI + dual-DB + LangGraph + Workers."
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["black", "ruff", "pre-commit", "pytest"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.uv.workspace]
+members = [
+    "01_src/api",
+    "01_src/worker",
+    "01_src/worker_search_sheet",
+    "01_src/worker_inbound_processor",
+    "01_src/packages/common",
+    "01_src/packages/data",
+    "01_src/packages/contracts",
+    "01_src/packages/ai",
+]
+
+[tool.uv.sources]
+api = { workspace = true }
+worker = { workspace = true }
+worker_search_sheet = { workspace = true }
+worker_inbound_processor = { workspace = true }
+common = { workspace = true }
+data = { workspace = true }
+contracts = { workspace = true }
+ai = { workspace = true }

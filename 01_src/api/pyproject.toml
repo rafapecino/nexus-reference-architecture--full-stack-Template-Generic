@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api"
+version = "0.1.0"
+description = "API FastAPI de la maqueta"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.114.0,<0.115",
+    "uvicorn[standard]>=0.30.6,<0.31",
+    "sqlalchemy>=2.0.13,<2.1.0",
+    "alembic>=1.13.3,<1.14.0",
+    "python-dotenv>=1.0.1,<2.0.0",
+    "psycopg2-binary>=2.9.9,<3.0.0",
+    "contracts>=0.1.0",
+    "data>=0.1.0",
+    "common>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]

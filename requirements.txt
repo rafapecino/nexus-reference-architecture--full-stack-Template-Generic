@@ -1,0 +1,20 @@
+-c constraints.txt
+
+# Paquetes instalables del monorepo en editable
+-e 01_src/packages/contracts
+-e 01_src/packages/data
+-e 01_src/packages/common
+-e 01_src/packages/ai
+
+# Herramientas de calidad y tests
+black
+ruff
+pre-commit
+pytest
+
+# Instalamos la api y el worker en editable para testing local
+-e 01_src/api
+-e 01_src/worker
+
+# Extras para FastAPI
+python-multipart

@@ -1,0 +1,11 @@
+-c ../../constraints.txt
+fastapi[standard]
+uvicorn[standard]
+python-dotenv
+alembic
+-e ../../packages/contracts
+-e ../../packages/data
+-e ../../packages/common
+-e ../../packages/ai
+openai
+pgvector

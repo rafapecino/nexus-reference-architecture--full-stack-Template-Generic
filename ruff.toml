@@ -1,0 +1,45 @@
+target-version = "py312"
+line-length = 100
+
+exclude = [
+  ".venv",
+  ".git",
+  "__pycache__",
+  ".pytest_cache",
+  ".mypy_cache",
+  ".ruff_cache",
+  "dist",
+  "build",
+  "**/migrations/**",
+  "**/alembic/**",
+]
+
+[lint]
+select = [
+  "E",   # Errores de pycodestyle
+  "F",   # Pyflakes
+  "I",   # Orden y normalización de imports (isort)
+  "UP",  # Pyupgrade para Python 3.12
+  "B",   # Bugbear (bichos habituales)
+  "N",   # Convenciones de nombres PEP8 (clases en PascalCase)
+  "SIM", # Simplificaciones seguras
+]
+
+# Evitamos conflictos con Black y avisos ruidosos
+ignore = [
+  "E203",
+  "E501",
+]
+
+[lint.per-file-ignores]
+"01_src/api/interfaces/routers/**" = ["B008"]   # FastAPI: Depends en defaults es un patrón válido
+"07_tests/**" = ["F841"]                        # En tests es habitual dejar fixtures o variables sin usar
+"**/__init__.py" = ["F401", "I001"]             # Reexport de imports en __init__.py — orden intencional
+
+[lint.isort]
+known-first-party = ["api", "common", "contracts", "data", "worker"]
+combine-as-imports = true
+
+[format]
+quote-style = "double"
+indent-style = "space"
